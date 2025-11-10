@@ -1,7 +1,19 @@
 const products = [
-  {title:"Masala Chips", price:"₹49", img:"https://source.unsplash.com/300x200/?chips"},
-  {title:"Roasted Namkeen", price:"₹79", img:"https://source.unsplash.com/300x200/?snacks"},
-  {title:"Sweet Mix", price:"₹99", img:"https://source.unsplash.com/300x200/?sweets"},
+  {
+    title:"Masala Chips",
+    price:"₹49",
+    img:"https://i.imgur.com/3ZQ3Z1u.png"
+  },
+  {
+    title:"Roasted Namkeen",
+    price:"₹79",
+    img:"https://i.imgur.com/O3ZQe1T.png"
+  },
+  {
+    title:"Sweet Mix",
+    price:"₹99",
+    img:"https://i.imgur.com/6QYV6cE.png"
+  }
 ];
 
 function load(){
@@ -19,7 +31,7 @@ function load(){
 function cards(data){
   return data.map(p=>`
     <div class="card">
-      <img src="${p.img}">
+      <img src="${p.img}" onerror="this.src='https://i.imgur.com/BO0aPjC.png'">
       <h3>${p.title}</h3>
       <p>${p.price}</p>
     </div>
